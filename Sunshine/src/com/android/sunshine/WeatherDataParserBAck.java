@@ -1,12 +1,14 @@
 package com.android.sunshine;
 
+import java.text.SimpleDateFormat;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.text.format.Time;
 
-public class WeatherDataParser {
+public class WeatherDataParserBAck {
 
 	public static double  getMaxTemperatureForDay( String weatherJsonStr, int dayIndex)throws JSONException {
 		JSONObject weather=new JSONObject(weatherJsonStr);
@@ -42,7 +44,7 @@ public class WeatherDataParser {
 	 * Fortunately parsing is easy:  constructor takes the JSON string and converts it
 	 * into an Object hierarchy for us.
 	 */
-	private String[] getWeatherDataFromJson(String forecastJsonStr, int numDays)
+	 String[] getWeatherDataFromJson(String forecastJsonStr, int numDays)
 	        throws JSONException {
 	 
 	    // These are the names of the JSON objects that need to be extracted.
